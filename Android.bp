@@ -1,0 +1,25 @@
+package {
+    default_applicable_licenses: ["BSD-3-Clause"],
+}
+
+cc_prebuilt_binary {
+    name: "tailscale",
+    visibility: ["//visibility:public"],
+    system_ext_specific: true,
+    arch: {
+        arm64: {
+            srcs: ["arm64/tailscale"],
+        },
+    }
+}
+
+cc_prebuilt_binary {
+    name: "tailscaled",
+    visibility: ["//visibility:public"],
+    system_ext_specific: true,
+    arch: {
+        arm64: {
+            srcs: ["arm64/tailscaled"],
+        },
+    }
+}
