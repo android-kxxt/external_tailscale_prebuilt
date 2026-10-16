@@ -2,6 +2,12 @@ package {
     default_applicable_licenses: ["BSD-3-Clause"],
 }
 
+// Marks prebuilts that include Android peer-credential and UI authorization support.
+phony {
+    name: "tailscaled-system-ui",
+    required: ["tailscaled"],
+}
+
 cc_prebuilt_binary {
     name: "tailscale",
     visibility: ["//visibility:public"],
